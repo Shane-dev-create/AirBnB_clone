@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This script is the base model"""
+"""Test BaseModel"""
 
 import uuid
 from datetime import datetime
@@ -12,7 +12,6 @@ class BaseModel:
 
     def __init__(self, *args, **kwargs):
         """Initializes instance attributes
-
         Args:
             - *args: list of arguments
             - **kwargs: dict of key-values arguments
@@ -35,13 +34,13 @@ class BaseModel:
             storage.new(self)
 
     def __str__(self):
-        """Returns official string representation"""
+        """Returns string representation"""
 
         return "[{}] ({}) {}".\
             format(type(self).__name__, self.id, self.__dict__)
 
     def save(self):
-        """updates the public instance attribute updated_at"""
+        """updates and saves"""
 
         self.updated_at = datetime.now()
         storage.save()
