@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Class FileStorage"""
+"""Module for FileStorage class."""
 import datetime
 import json
 import os
@@ -16,7 +16,7 @@ class FileStorage:
         return FileStorage.__objects
 
     def new(self, obj):
-        """sets the objects with key in __objects"""
+        """sets in __objects the obj with key <obj class name>.id"""
         key = "{}.{}".format(type(obj).__name__, obj.id)
         FileStorage.__objects[key] = obj
 
@@ -46,7 +46,7 @@ class FileStorage:
         return classes
 
     def reload(self):
-        """Deserializes the JSON file to __objects,if the JSON file exists"""
+        """Reloads the stored objects"""
         if not os.path.isfile(FileStorage.__file_path):
             return
         with open(FileStorage.__file_path, "r", encoding="utf-8") as f:

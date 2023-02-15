@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-"""Tests Amenity """
-
-
+"""Defines unittests for models/amenity.py.
+Unittest classes:
+    TestAmenity_instantiation
+    TestAmenity_save
+    TestAmenity_to_dict
+"""
 import os
 import models
 import unittest

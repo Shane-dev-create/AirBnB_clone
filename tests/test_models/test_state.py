@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-"""Unit test for State """
-
-
+"""Defines unittests for models/state.py.
+Unittest classes:
+    TestState_instantiation
+    TestState_save
+    TestState_to_dict
+"""
 import os
 import models
 import unittest
