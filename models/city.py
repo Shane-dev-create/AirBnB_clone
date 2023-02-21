@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """This module creates a User class"""
+<<<<<<< HEAD
 from models.base_model import BaseModel, Base
 from models import storage_type
 from sqlalchemy import Column, String, ForeignKey
@@ -17,3 +18,14 @@ class City(BaseModel, Base):
     else:
         name = ''
         state_id = ''
+=======
+
+from models.base_model import BaseModel
+
+
+class City(BaseModel):
+    """Class for managing city objects"""
+
+    state_id = ""
+    name = ""
+>>>>>>> 877b82577af2985e29f5d41a628268581730b68b

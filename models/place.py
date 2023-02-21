@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+<<<<<<< HEAD
 """ Place Module for HBNB project """
 
 from models.amenity import Amenity
@@ -92,3 +93,24 @@ class Place(BaseModel, Base):
                 if isinstance(obj, Amenity):
                     if obj.id not in self.amenity_ids:
                         self.amenity_ids.append(obj.id)
+=======
+"""This module creates a Place class"""
+
+from models.base_model import BaseModel
+
+
+class Place(BaseModel):
+    """Class for managing place objects"""
+
+    city_id = ""
+    user_id = ""
+    name = ""
+    description = ""
+    number_rooms = 0
+    number_bathrooms = 0
+    max_guest = 0
+    price_by_night = 0
+    latitude = 0.0
+    longitude = 0.0
+    amenity_ids = []
+>>>>>>> 877b82577af2985e29f5d41a628268581730b68b

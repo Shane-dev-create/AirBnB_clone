@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+<<<<<<< HEAD
 """ State Module for HBNB project """
 from models.base_model import BaseModel, Base
 from models import storage_type
@@ -30,3 +31,14 @@ class State(BaseModel, Base):
                 if city.state_id == self.id:
                     related_cities.append(city)
             return related_cities
+=======
+"""This module creates a User class"""
+
+from models.base_model import BaseModel
+
+
+class State(BaseModel):
+    """Class for managing state objects"""
+
+    name = ""
+>>>>>>> 877b82577af2985e29f5d41a628268581730b68b

@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+<<<<<<< HEAD
 """This module defines a class User"""
 from models.base_model import BaseModel, Base
 from models import storage_type
@@ -23,3 +24,16 @@ class User(BaseModel, Base):
         password = ""
         first_name = ""
         last_name = ""
+=======
+"""This module creates a User class"""
+from models.base_model import BaseModel
+
+
+class User(BaseModel):
+    """Class for managing user objects"""
+
+    email = ""
+    password = ""
+    first_name = ""
+    last_name = ""
+>>>>>>> 877b82577af2985e29f5d41a628268581730b68b
