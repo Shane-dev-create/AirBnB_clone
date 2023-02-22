@@ -2,10 +2,11 @@
 """Module for the entry point of the command interpreter."""
 
 import cmd
-from models.base_model import BaseModel
-from models import storage
 import re
 import json
+from models.base_model import BaseModel
+from models import storage
+
 
 
 class HBNBCommand(cmd.Cmd):
@@ -73,13 +74,13 @@ class HBNBCommand(cmd.Cmd):
                     setattr(storage.all()[key], attribute, value)
                 storage.all()[key].save()
 
-    def do_EOF(self, line):
+    def do_EOF(self):
         """Handles End Of File character.
         """
         print()
         return True
 
-    def do_quit(self, line):
+    def do_quit(self):
         """Exits the program.
         """
         return True
